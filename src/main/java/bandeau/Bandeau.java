@@ -30,8 +30,8 @@ public class Bandeau {
 
 		public BannerPanel() {
 			super();
-			setForeground(Color.black);
-			setBackground(Color.white);
+			setForeground(Color.red);
+			setBackground(Color.black);
 			setFont(new Font(null, Font.BOLD, 25));
 		}
 
@@ -105,7 +105,7 @@ public class Bandeau {
 				JFrame frame = new JFrame("Publicite");
 				frame.getContentPane().setLayout(new BorderLayout());
 				frame.getContentPane().add(myPanel, BorderLayout.CENTER);
-				frame.setSize(new Dimension(400, 300));
+				frame.setSize(new Dimension(600, 500));
 				frame.setVisible(true);
 			}
 		});

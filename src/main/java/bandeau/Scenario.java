@@ -21,48 +21,30 @@ public class Scenario {
         this.nbRepet = nbRepet;
     }
 
-    public void appliquerzoom(Bandeau b) {
+    
+
+    public void appliquer(Bandeau b) {
+        JeuDuPendu jdp = new JeuDuPendu(1);
+        TeleType tele = new TeleType(1);
+        Clignotant cli = new Clignotant(5);
+        Rotation rota = new Rotation(1);
+
         Zoom zoom = new Zoom(1);
         leseffets.add(zoom);
-        zoom.zoomer(b);
-    }
-
-    public void appliquerrota(Bandeau b) {
-
-        Rotation rota = new Rotation(1);
 
         leseffets.add(rota);
 
-        rota.rotation(b);
-
-    }
-
-    public void appliquercli(Bandeau b) {
-      
-        Clignotant cli = new Clignotant(5);
-  
         leseffets.add(cli);
-      
-            cli.clignoter(b);
-            
-    }
 
-    public void appliquertele(Bandeau b) {
-       
-        TeleType tele = new TeleType(1);
-        
         leseffets.add(tele);
-            tele.affichageGauche(b);
-    }
-
-    public void appliquerjdp(Bandeau b) {
-       
-        JeuDuPendu jdp = new JeuDuPendu(1);
-       
         leseffets.add(jdp);
-        
-            jdp.pendu(b);
-            b.sleep(1000);
-    }
 
+        for (int i = 0; i < nbRepet; i++) {
+            jdp.pendu(b);
+            tele.affichageGauche(b);
+            cli.clignoter(b);
+            rota.rotation(b);
+            zoom.zoomer(b);
+        }
+    }
 }
