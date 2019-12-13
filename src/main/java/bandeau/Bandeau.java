@@ -11,8 +11,14 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.FontMetrics;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Bandeau {
+
+    void setMessage(char c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 	static class BannerPanel extends JPanel {
 
@@ -33,7 +39,7 @@ public class Bandeau {
 			myMessage = message;
 			repaint();
 		}
-
+                
 		public String getMessage() {
 			return myMessage;
 		}
@@ -208,5 +214,17 @@ public class Bandeau {
 	public void sleep(int millis) {
 		myPanel.sleep(millis);
 	}
+        
+            
+         
+         
+     }
 
-}
+        
+
+        
+
+        
+
+
+
