@@ -17,15 +17,15 @@ public class ExempleDUtilisation {
         Scenario scenario = new Scenario(2);
 
         monBandeau.setMessage("Hello ");   
-        scenario.appliquer(monBandeau);
+        scenario.appliquerjdp(monBandeau);
         monBandeau.setMessage("Mr");   
-        scenario.appliquer(monBandeau);
+        scenario.appliquerzoom(monBandeau);
         monBandeau.setMessage("Bastide, ");   
-        scenario.appliquer(monBandeau);
+        scenario.appliquercli(monBandeau);
             monBandeau.setMessage("Joyeux");   
-        scenario.appliquer(monBandeau);
+        scenario.appliquerrota(monBandeau);
         monBandeau.setMessage("Noël !!!");   
-        scenario.appliquer(monBandeau);
+        scenario.appliquertele(monBandeau);
    
 } 
 }

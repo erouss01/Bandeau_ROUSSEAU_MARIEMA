@@ -12,32 +12,57 @@ import java.util.ArrayList;
  * @author Emma
  */
 public class Scenario {
-    private ArrayList<Effet> leseffets ;
+
+    private ArrayList<Effet> leseffets;
     private int nbRepet;
-    
-    public Scenario (int nbRepet){
-        this.leseffets = new ArrayList <>();
-        this.nbRepet = nbRepet ;  
-        }
-    public void appliquer(Bandeau b){
-        Zoom zoom = new Zoom(1);
-        Rotation rota = new Rotation(2);
-        Clignotant cli = new Clignotant(5);
-        TeleType tele = new TeleType(1);
-        JeuDuPendu jdp = new JeuDuPendu(1);
-        leseffets.add(jdp);
-        leseffets.add(zoom);
-        leseffets.add(rota);
-        leseffets.add(tele);
-        leseffets.add(cli);
-        for (int i=0 ; i<nbRepet ; i++){
-            jdp.pendu(b);
-            zoom.zoomer(b);
-            rota.rotation(b);
-            cli.clignoter(b);
-            tele.affichageGauche(b);
-            
-        }
+
+    public Scenario(int nbRepet) {
+        this.leseffets = new ArrayList<>();
+        this.nbRepet = nbRepet;
     }
-    
+
+    public void appliquerzoom(Bandeau b) {
+        Zoom zoom = new Zoom(1);
+        leseffets.add(zoom);
+        zoom.zoomer(b);
+    }
+
+    public void appliquerrota(Bandeau b) {
+
+        Rotation rota = new Rotation(1);
+
+        leseffets.add(rota);
+
+        rota.rotation(b);
+
+    }
+
+    public void appliquercli(Bandeau b) {
+      
+        Clignotant cli = new Clignotant(5);
+  
+        leseffets.add(cli);
+      
+            cli.clignoter(b);
+            
+    }
+
+    public void appliquertele(Bandeau b) {
+       
+        TeleType tele = new TeleType(1);
+        
+        leseffets.add(tele);
+            tele.affichageGauche(b);
+    }
+
+    public void appliquerjdp(Bandeau b) {
+       
+        JeuDuPendu jdp = new JeuDuPendu(1);
+       
+        leseffets.add(jdp);
+        
+            jdp.pendu(b);
+            b.sleep(1000);
+    }
+
 }
