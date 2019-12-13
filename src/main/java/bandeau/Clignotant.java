@@ -17,9 +17,9 @@ public class Clignotant extends Effet{
         
     }
     
-            public void clignoter (Bandeau b){
+            public void clignoter (Bandeau b,String mess){
                 
-                String n = b.getMessage();
+                String n = mess;
             for (int i=0 ; i<= nbRepet ; i++){
             b.sleep(100);
             b.setMessage(n) ;

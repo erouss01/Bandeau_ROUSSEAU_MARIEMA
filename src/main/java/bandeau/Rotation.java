@@ -16,13 +16,14 @@ public class Rotation extends Effet{
         }
      
      
-          public void rotation(Bandeau b){
+          public void rotation(Bandeau b,String mess){
+              b.setMessage(mess);
             for (int f=0 ; f<this.nbRepet ; f++){
                 b.sleep(100);
                  double d = b.getRotation();
          for (int i = 0; i <= 100; i++) {
 		b.setRotation(2*Math.PI*i / 100);
-		b.sleep(100);
+		b.sleep(35);
 	}
         
            b.setRotation(d); 

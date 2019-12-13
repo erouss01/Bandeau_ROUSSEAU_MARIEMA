@@ -24,5 +24,6 @@ public class Effet {
         this.nbRepet = nbRepet;
     }
    
+    
    
 }

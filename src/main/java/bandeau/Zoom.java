@@ -17,7 +17,8 @@ public class Zoom extends Effet {
         super(nbRepet);
         }
     
-            public void zoomer(Bandeau b){
+            public void zoomer(Bandeau b,String mess){
+                b.setMessage(mess);
                 for (int t=0 ; t<this.nbRepet ; t++){
                     b.sleep(100);
                     Font f = b.getFont();

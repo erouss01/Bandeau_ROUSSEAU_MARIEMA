@@ -15,8 +15,7 @@ public class ExempleDUtilisation {
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
         Scenario scenario = new Scenario(2);
-
-        monBandeau.setMessage("Hello Mr Bastide, Joyeux Noël!!!");   
+  
         scenario.appliquer(monBandeau);
 } 
 }

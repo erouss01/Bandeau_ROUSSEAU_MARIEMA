@@ -28,23 +28,21 @@ public class Scenario {
         TeleType tele = new TeleType(1);
         Clignotant cli = new Clignotant(5);
         Rotation rota = new Rotation(1);
-
         Zoom zoom = new Zoom(1);
         leseffets.add(zoom);
-
         leseffets.add(rota);
-
         leseffets.add(cli);
-
         leseffets.add(tele);
         leseffets.add(jdp);
 
         for (int i = 0; i < nbRepet; i++) {
-            jdp.pendu(b);
-            tele.affichageGauche(b);
-            cli.clignoter(b);
-            rota.rotation(b);
-            zoom.zoomer(b);
+            jdp.pendu(b,"Hello");
+            b.sleep(1000);
+            tele.affichageGauche(b,"Monsieur");
+            b.sleep(1000);
+            cli.clignoter(b,"Bastide,");
+            rota.rotation(b,"Joyeux");
+            zoom.zoomer(b,"Noël!!!");
         }
     }
 }

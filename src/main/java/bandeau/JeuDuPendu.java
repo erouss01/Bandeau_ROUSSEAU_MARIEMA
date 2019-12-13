@@ -18,11 +18,11 @@ public class JeuDuPendu extends Effet {
         super(nbRepet);
         }
     
- public void pendu (Bandeau b){
+ public void pendu (Bandeau b,String mess){
      for (int t=0 ; t<this.nbRepet ; t++){
          b.sleep(100);
-         String mInitial = b.getMessage() ;
-         int taille = b.getMessage().length() ;
+         String mInitial = mess ;
+         int taille = mess.length() ;
          b.setMessage("_");
          
          for (int i=0;i< taille-1;i++){

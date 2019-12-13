@@ -15,10 +15,10 @@ public class TeleType extends Effet {
         super(nbRepet);
         } 
    
-         public void affichageGauche(Bandeau b){
+         public void affichageGauche(Bandeau b,String mess){
              for (int f=0 ; f<this.nbRepet ; f++){
                  b.sleep(100);
-                 String mInitial = b.getMessage() ;
+                 String mInitial = mess ;
          int taille = mInitial.length() ;
          b.setMessage("");
          
